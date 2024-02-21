@@ -92,7 +92,7 @@ class _Offer extends State<Offer> {
                         backgroundColor:
                             MaterialStateProperty.resolveWith<Color?>(
                           (Set<MaterialState> states) {
-                            return Colors.blue;
+                            return Colors.blueAccent[400]; //previously blue
                           },
                         ),
                         foregroundColor:

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "484175567438",
+    "project_id": "flutter-calender-1dcda",
+    "storage_bucket": "flutter-calender-1dcda.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:484175567438:android:68576e86c027b0a01f411f",
+        "android_client_info": {
+          "package_name": "com.calendar.page.example.example"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqWZOfJr_2IgKfpAD9fRsmKiw83Nrbxz4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:484175567438:android:08ae44a3a48068ca1f411f",
+        "android_client_info": {
+          "package_name": "com.example.flutter_booking_offers"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqWZOfJr_2IgKfpAD9fRsmKiw83Nrbxz4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

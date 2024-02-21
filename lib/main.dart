@@ -1,8 +1,38 @@
 import 'package:flutter/material.dart';
 
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
+
+import 'package:firebase_auth/firebase_auth.dart';
+
 import 'package:flutter_booking_offers/offers.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
+  FirebaseAuth.instance.authStateChanges().listen((User? user) {
+    if (user == null) {
+      print('User is currently signed out!');
+    } else {
+      print('User is signed in!');
+    }
+  });
+
+  // FirebaseAuth.instance.createUserWithEmailAndPassword(email: "accounts@stuppnig.net", password: "testaa").then((value) => print(value),).onError((error, stackTrace) => print("Custom Error: $error"),);
+
+  FirebaseAuth.instance
+      .signInWithEmailAndPassword(
+          email: "accounts@stuppnig.net", password: "testaa")
+      .then(
+        (value) => print(value),
+      )
+      .onError(
+        (error, stackTrace) => print("Custom Error $error"),
+      );
+
   runApp(const App());
 }
 
@@ -43,9 +73,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Offers(amount: _showMore ? 10 : 3)
-      ),
+      body: Center(child: Offers(amount: _showMore ? 10 : 3)),
       floatingActionButton: FloatingActionButton(
         onPressed: _toggleShowMore,
         tooltip: 'Show More',
