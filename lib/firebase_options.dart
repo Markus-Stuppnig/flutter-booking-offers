@@ -49,6 +49,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '484175567438',
     projectId: 'flutter-calender-1dcda',
     authDomain: 'flutter-calender-1dcda.firebaseapp.com',
+    databaseURL: 'https://flutter-calender-1dcda-default-rtdb.europe-west1.firebasedatabase.app',
     storageBucket: 'flutter-calender-1dcda.appspot.com',
   );
 
@@ -57,6 +58,7 @@ class DefaultFirebaseOptions {
     appId: '1:484175567438:android:08ae44a3a48068ca1f411f',
     messagingSenderId: '484175567438',
     projectId: 'flutter-calender-1dcda',
+    databaseURL: 'https://flutter-calender-1dcda-default-rtdb.europe-west1.firebasedatabase.app',
     storageBucket: 'flutter-calender-1dcda.appspot.com',
   );
 
@@ -65,6 +67,7 @@ class DefaultFirebaseOptions {
     appId: '1:484175567438:ios:9075fb0854fb4f291f411f',
     messagingSenderId: '484175567438',
     projectId: 'flutter-calender-1dcda',
+    databaseURL: 'https://flutter-calender-1dcda-default-rtdb.europe-west1.firebasedatabase.app',
     storageBucket: 'flutter-calender-1dcda.appspot.com',
     iosBundleId: 'com.example.flutterBookingOffers',
   );
@@ -74,6 +77,7 @@ class DefaultFirebaseOptions {
     appId: '1:484175567438:ios:8e4a6b86d190ea541f411f',
     messagingSenderId: '484175567438',
     projectId: 'flutter-calender-1dcda',
+    databaseURL: 'https://flutter-calender-1dcda-default-rtdb.europe-west1.firebasedatabase.app',
     storageBucket: 'flutter-calender-1dcda.appspot.com',
     iosBundleId: 'com.example.flutterBookingOffers.RunnerTests',
   );

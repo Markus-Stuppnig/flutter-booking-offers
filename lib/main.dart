@@ -4,6 +4,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_database/firebase_database.dart';
 
 import 'package:flutter_booking_offers/offers.dart';
 
@@ -23,15 +24,34 @@ void main() async {
 
   // FirebaseAuth.instance.createUserWithEmailAndPassword(email: "accounts@stuppnig.net", password: "testaa").then((value) => print(value),).onError((error, stackTrace) => print("Custom Error: $error"),);
 
-  FirebaseAuth.instance
-      .signInWithEmailAndPassword(
-          email: "accounts@stuppnig.net", password: "testaa")
-      .then(
-        (value) => print(value),
-      )
-      .onError(
-        (error, stackTrace) => print("Custom Error $error"),
-      );
+  try {
+    await FirebaseAuth.instance.signInWithEmailAndPassword(
+      email: "accounts@stuppnig.net",
+      password: "testaa",
+    ).then((value) => print(value)).onError((error, stackTrace) => print(error));
+
+    String? uid = FirebaseAuth.instance.currentUser?.uid;
+
+    if(uid != null) {
+      print(uid);
+
+      DatabaseReference ref = FirebaseDatabase.instance.ref("users/$uid");
+      
+      await ref.set({
+        "name": "John",
+        "age": 18,
+        "address": {
+          "line1": "100 Mountain View",
+        },
+      });
+    }
+    
+  } on FirebaseAuthException catch (e) {
+    print("Failed with error code: ${e.code}");
+    print(e.message);
+  }
+
+      
 
   runApp(const App());
 }

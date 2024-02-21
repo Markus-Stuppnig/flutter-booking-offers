@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "484175567438",
+    "firebase_url": "https://flutter-calender-1dcda-default-rtdb.europe-west1.firebasedatabase.app",
     "project_id": "flutter-calender-1dcda",
     "storage_bucket": "flutter-calender-1dcda.appspot.com"
   },
